@@ -1,0 +1,738 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+#wrapper
+{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.home
+{
+    width: 100vw;
+    height: 75vh;
+    background-size: cover;
+    position: relative;
+}
+
+.home .home-bg
+{
+    width: 100%;
+    height: 75vh;
+}
+
+.home .blue-background
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* nav
+{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+} */
+
+.navbar button {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-item
+{
+    text-transform: uppercase !important;
+}
+
+.nav-item a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item a:hover
+{
+    color: black !important;
+}
+
+.active
+{
+    color: black !important;
+}
+
+.nav-item a
+{
+    position: relative;
+}
+
+.nav-item a span
+{
+    position: absolute;
+    bottom: -1px;
+    width: 70px;
+    height: 3px;
+}
+
+.active-nav
+{
+    position: absolute;
+    bottom: 10px;
+    width: 70px;
+    height: 3px;
+    background-color: rgb(105, 93, 93);
+}
+
+.nav-item a:hover > span
+{
+    background-color: rgb(105, 93, 93);
+}
+
+.arrow-down {
+    position: relative;
+    width: 10px;
+    background-color: #fff;
+    margin: 0  5px;
+}
+
+.arrow-down:after,
+.arrow-down:before {
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0px,-20%);
+}
+
+.arrow-down:before {
+    border-color: rgb(124, 121, 121) transparent transparent;
+}
+
+.arrow-down:after {
+    margin-top: -1.5px;
+    border-color: #fff transparent transparent;
+}
+
+
+.home nav
+{
+    position: absolute;
+    top: 5%;
+    width: 90%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+    border-radius: 10px;
+    box-shadow: 2px 3px 15px rgb(29, 96, 240),
+                -1px -1px 5px rgb(65,177,238);
+    z-index: 5;
+}
+
+.menu-logo
+{
+    display: inline;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.status
+{
+    display: block;
+}
+
+.dots
+{
+    position: absolute;
+    transform: translate(15%,45%);
+    opacity: 0;
+    animation: dotAnime 1s linear both;
+}
+
+@keyframes dotAnime
+{
+    to{opacity: 1;}
+}
+
+.lines
+{
+    position: absolute;
+    transform: translate(9%,-20%);
+    opacity: 0;
+    animation: lineAnime 1s linear both;
+}
+
+@keyframes lineAnime
+{
+    to{opacity: 1;}
+}
+
+/*  Mobile menu open  */
+
+.nav-down
+{
+    display: block !important;
+    width: 80%;
+    z-index: 99;
+    justify-content: center;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+    background-color: rgb(255, 255, 255);
+}
+
+.home .main-bg
+{
+    position: absolute;
+    top: 15%;
+    transform: translateY(-4%);
+}
+
+.home .main-bg img 
+{
+    width: 60%;
+    height: 60%;
+}
+
+.home .main-bg .logo
+{
+    position: relative;
+    top: 15%;
+    left: 5%;
+    transform: translate(-10%,15%);
+}
+
+.home .main-bg .logo span
+{
+    text-transform: uppercase;
+    font-size: 60px;
+    color: white;
+}
+
+.home .main-bg .logo span:nth-child(2)
+{
+    position: relative;
+    top: -50px;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.home .bitcoin
+{
+    position: relative;
+    top: -20%;
+    transform: translateY(25%);
+    max-width: 250px;
+    margin-left: 20px;
+}
+
+.bitcoin1
+{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.bitcoin2
+{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-size: cover;
+    position: relative;
+    left: 10%;
+    transform: translate(-70%,30%);
+    z-index: -1;
+}
+
+.bitcoin1 img , .bitcoin2 img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.cover
+{
+    word-wrap: break-word;
+}
+
+.service
+{
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+.view
+{
+    border-radius: 8px;
+}
+
+.view:hover
+{
+    background-color: #007bff;
+}
+
+.contact
+{
+    position: relative;
+    margin-top: 5%;
+}
+
+.contact-article
+{
+    font-size: 25px;
+    text-shadow: 2px 2px rgb(59, 58, 58);
+}
+
+.contacts-bg
+{
+    width: 100vw;
+    height: 60vh !important;
+}
+
+.contacts-bg img
+{
+    height: 60vh !important;
+}
+
+.contact-items
+{
+    position: absolute;
+}
+
+.contact-card
+{
+    position: relative;
+    top: 15%;
+    /* transform: translateY(-50%); */
+}
+
+.trends
+{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.inner-trend
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.inner-trend img
+{
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.trend-core
+{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 100%;
+}
+
+.trend-core header
+{
+    font-size: 80px;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.trend-details
+{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow: 2px 1px #111;
+}
+
+.trend-card img
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 90% !important;
+}
+
+.card-btn
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    padding: 6px 40px;
+}
+
+#wrapper footer
+{
+    position: absolute;
+    bottom: -5%;
+    background-color: #044681;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 1024px)
+{
+    .home
+    {
+        width: 100vw;
+        height: 60vh;
+        background-size: cover;
+        position: relative;
+    }
+
+    .home .home-bg
+    {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .home .main-bg
+    {
+        position: absolute;
+        top: 15%;
+        transform: translateY(3%);
+    }
+
+    .home .main-bg img 
+    {
+        width: 80%;
+        height: 80%;
+    }
+
+    .home .bitcoin
+    {
+        position: relative;
+        top: 0%;
+        transform: translateY(-80%);
+        max-width: 250px;
+    }
+
+    .home .main-bg .logo span:nth-child(1)
+    {
+        font-size: 30px !important;
+    }
+
+    .home .main-bg .logo span:nth-child(2)
+    {
+        text-transform: uppercase;
+        font-size: 40px !important;
+        color: white;
+        position: relative;
+        font-weight: 400;
+        top: 0%;
+        transform: translateY(-40%);
+    }
+
+    .contact-article
+    {
+        font-size: 20px;
+    }
+
+    
+    .trends
+    {
+        width: 100vw;
+        height: 60vh;
+        position: relative;
+    }
+
+    .inner-trend
+    {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .inner-trend img
+    {
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .trend-core
+    {
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trend-core header
+    {
+        font-size: 50px;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .trend-details
+    {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 300;
+        text-transform: capitalize;
+        text-align: center;
+        text-shadow: 2px 1px #111;
+    }
+
+    .trend-card img
+    {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        height: 100% !important;
+    }
+
+    .card-btn
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 5;
+        padding: 4px 10px;
+    }
+
+    #wrapper footer
+    {
+    position: absolute;
+    bottom: -10%;
+    background-color: #044681;
+    padding: 5px;
+    }
+
+    footer span
+    {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 600px)
+{
+
+    .home
+    {
+        width: 100vw;
+        height: 40vh;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .home nav
+    {
+        position: fixed;
+        top: 2%;
+        width: 100%;
+    }
+
+    .home .home-bg
+    {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .home .blue-background
+    {
+        width: 100vw;
+        height: 100%;
+    }
+
+    .home .main-bg
+    {
+        position: absolute;
+        top: 15%;
+        transform: translateY(9%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .main-bg img 
+    {
+        width: 70%;
+        height: 70%;
+    }
+
+.bitcoin1
+{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.bitcoin2
+{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-size: cover;
+    position: relative;
+    left: 10%;
+    transform: translate(-80%,30%);
+    z-index: -1;
+}
+
+.home .main-bg .logo span:nth-child(1)
+{
+    font-size: 30px !important;
+}
+
+.home .main-bg .logo span:nth-child(2)
+{
+    text-transform: uppercase;
+    font-size: 40px !important;
+    color: white;
+    position: relative;
+    font-weight: 400;
+    top: 0%;
+    transform: translateY(-40%);
+}
+
+
+.contacts-bg
+{
+    height: 60% !important;
+}
+
+.contact-card
+{
+    width: 95% !important;
+}
+
+.contact-items
+{
+    height: 100% !important;
+}
+
+.contact-article
+    {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #wrapper footer
+    {
+    position: absolute;
+    bottom: -35%;
+    background-color: #044681;
+    padding: 5px;
+    }
+
+    footer span
+    {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .contacts-bg
+    {
+        display: none;
+    }
+
+    .contact-items div:nth-child(1)
+    {
+        background-color: #044681;
+    }
+
+    
+.trends
+{
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    margin-top: 20px;
+}
+
+.inner-trend
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.inner-trend img
+{
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.trend-core
+{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.trend-core header
+{
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.trend-details
+{
+    font-size: 12px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow: 2px 1px #111;
+}
+
+.trend-card img
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100% !important;
+}
+
+.card-btn
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    padding: 1px 10px;
+}
+}
