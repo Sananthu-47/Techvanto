@@ -14,12 +14,22 @@ body
     align-items: center;
 }
 
+#loading-page span
+{
+    position: absolute;
+    top: calc(50% + 130px);
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 30px;
+}
+
 .loader
 {
     position: absolute;
     top: 50%;
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db;
+    transform: translateY(-50%);
+    border: 15px solid #f3f3f3;
+    border-top: 15px solid #3498db;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -419,7 +429,7 @@ body
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 5;
+    z-index: 2;
     padding: 6px 40px;
 }
 
@@ -593,6 +603,7 @@ body
     .home nav
     {
         position: fixed;
+        z-index: 5;
         top: 2%;
         width: 100%;
     }
@@ -781,7 +792,7 @@ body
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        z-index: 5;
+        z-index: 2;
         padding: 0px 5px !important;
         display: flex;
         justify-content: center;

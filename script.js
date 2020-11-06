@@ -1,7 +1,7 @@
 window.onload = ()=>{
     document.getElementById('loading-page').style.display="none";
     document.getElementById('wrapper').style.display="block";
-    
+
 //Required variables
 const menuLogo = document.querySelector('.menu-logo');
 const menuOutput = document.querySelector('.menu-output');
