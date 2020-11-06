@@ -18,11 +18,15 @@
     <title>Techvanto</title>
 </head>
 <body>
+  <div id="loading-page" class="w-100 h-100">
+    <div class="loader"></div>
+  </div>
   <div id="wrapper">
     <section class="home container-fluid p-0">
       <!--  Background image in the home section    -->
       <div class="home-bg">
         <img src="Assets/backgrounds/Rectangle 11.png" class="blue-background" alt="background">
+        <div id="particles-js"></div>
       </div>
         <!--  Navbar of the page  -->
         <nav class="navbar navbar-expand-lg navbar-white p-0 bg-white mx-auto">
@@ -46,11 +50,6 @@
                   <a class="nav-link text-secondary mx-1" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Services<div class="arrow-down"></div>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-secondary mx-1" href="#">About us<span></span></a>
@@ -69,7 +68,6 @@
                 </g>
             </svg>
             </button>
-
           </nav>
           <!--     Menu is displayed in this div   -->
           <div class="menu-output"></div>
@@ -174,10 +172,11 @@
       </div>
     </section>
     <!--      Fotter of the website   -->
-    <footer class="w-100 mt-5">
+    <footer class="w-100">
       <span class="text-white">Copyright 2009-2020 OodlesTechnologies. All rights reserved.</span>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -7,11 +7,37 @@ body
     overflow-x: hidden;
 }
 
+#loading-page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader
+{
+    position: absolute;
+    top: 50%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+  
+  @keyframes spin
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 #wrapper
 {
     position: relative;
     width: 100vw;
     min-height: 100vh;
+    display: none;
 }
 
 .home
@@ -34,12 +60,14 @@ body
     height: 100%;
 }
 
-/* nav
+#particles-js
 {
-    position: sticky;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
     top: 0;
-    z-index: 99;
-} */
+}
 
 .navbar button {
     position: absolute;
@@ -47,6 +75,12 @@ body
     transform: translateX(-100%);
     outline: none;
     cursor: pointer;
+}
+
+.dropdown:hover .arrow-down
+{
+    position: relative;
+    transform: translateX(100%) rotate(180deg);
 }
 
 .nav-item
@@ -320,7 +354,6 @@ body
 {
     position: relative;
     top: 15%;
-    /* transform: translateY(-50%); */
 }
 
 .trends
@@ -412,6 +445,12 @@ body
     {
         width: 100%;
         height: 60vh;
+    }
+
+    .menu-output
+    {
+        position: fixed;
+        top: 130px;
     }
 
     .home .main-bg
@@ -558,6 +597,12 @@ body
         width: 100%;
     }
 
+    .menu-output
+    {
+        position: fixed;
+        top: 120px;
+    }
+
     .home .home-bg
     {
         width: 100%;
@@ -585,60 +630,63 @@ body
         height: 70%;
     }
 
-.bitcoin1
-{
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    background-size: cover;
-}
+    .bitcoin1
+    {
+        width: 30%;
+        height: 30%;
+        border-radius: 50%;
+        background-size: cover;
+    }
 
-.bitcoin2
-{
-    width: 20%;
-    height: 20%;
-    border-radius: 50%;
-    background-size: cover;
-    position: relative;
-    left: 10%;
-    transform: translate(-80%,30%);
-    z-index: -1;
-}
+    .bitcoin2
+    {
+        width: 20%;
+        height: 20%;
+        border-radius: 50%;
+        background-size: cover;
+        position: relative;
+        left: 10%;
+        transform: translate(-80%,30%);
+        z-index: -1;
+    }
 
-.home .main-bg .logo span:nth-child(1)
-{
-    font-size: 30px !important;
-}
+    .home .main-bg .logo span:nth-child(1)
+    {
+        font-size: 30px !important;
+    }
 
-.home .main-bg .logo span:nth-child(2)
-{
-    text-transform: uppercase;
-    font-size: 40px !important;
-    color: white;
-    position: relative;
-    font-weight: 400;
-    top: 0%;
-    transform: translateY(-40%);
-}
+    .home .main-bg .logo span:nth-child(2)
+    {
+        text-transform: uppercase;
+        font-size: 40px !important;
+        color: white;
+        position: relative;
+        font-weight: 400;
+        top: 0%;
+        transform: translateY(-40%);
+    }
 
+    .service
+    {
+        font-size: 22px;
+    }
 
+    .contacts-bg
+    {
+        height: 60% !important;
+    }
 
-.contacts-bg
-{
-    height: 60% !important;
-}
+    .contact-card
+    {
+        width: 95% !important;
+    }
 
-.contact-card
-{
-    width: 95% !important;
-}
+    .contact-items
+    {
+        height: 100% !important;
+    }
 
-.contact-items
-{
-    height: 100% !important;
-}
-
-.contact-article
+    .contact-article
     {
         font-size: 18px;
         padding: 10px;
@@ -647,7 +695,7 @@ body
     #wrapper footer
     {
     position: absolute;
-    bottom: -35%;
+    bottom: -30%;
     background-color: #044681;
     padding: 5px;
     }
@@ -669,71 +717,80 @@ body
     }
 
     
-.trends
-{
-    width: 100vw;
-    height: 50vh;
-    position: relative;
-    margin-top: 20px;
-}
+    .trends
+    {
+        width: 100vw;
+        height: 50vh;
+        position: relative;
+        margin-top: 20px;
+    }
 
-.inner-trend
-{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
+    .inner-trend
+    {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
 
-.inner-trend img
-{
-    width: 100%;
-    height: 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+    .inner-trend img
+    {
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-.trend-core
-{
-    position: absolute;
-    top: 10%;
-    width: 100%;
-    height: 100%;
-}
+    .trend-core
+    {
+        position: absolute;
+        top: 15%;
+        width: 100%;
+        height: 100%;
+    }
 
-.trend-core header
-{
-    font-size: 25px;
-    color: white;
-    font-weight: 300;
-    text-transform: uppercase;
-}
+    .trend-core header
+    {
+        font-size: 25px;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
 
-.trend-details
-{
-    font-size: 12px;
-    color: #fff;
-    font-weight: 300;
-    text-transform: capitalize;
-    text-align: center;
-    text-shadow: 2px 1px #111;
-}
+    .trend-details
+    {
+        font-size: 12px;
+        color: #fff;
+        font-weight: 300;
+        text-transform: capitalize;
+        text-align: center;
+        text-shadow: 2px 1px #111;
+    }
 
-.trend-card img
-{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100% !important;
-}
+    .trend-card img
+    {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100% !important;
+    }
 
-.card-btn
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 5;
-    padding: 1px 10px;
-}
+    .card-btn
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 5;
+        padding: 0px 5px !important;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    .card-btn span
+    {
+        font-size: 8px;
+        padding: 0px 2px !important;
+    }
 }

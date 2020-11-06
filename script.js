@@ -1,3 +1,7 @@
+window.onload = ()=>{
+    document.getElementById('loading-page').style.display="none";
+    document.getElementById('wrapper').style.display="block";
+    
 //Required variables
 const menuLogo = document.querySelector('.menu-logo');
 const menuOutput = document.querySelector('.menu-output');
@@ -11,7 +15,7 @@ function toogleMenu(e) {
     if (e.target.classList.contains('status')) {
         toggle(menuLogo,'status',menuOutput,'nav-down');
         menuOutput.innerHTML = navData.innerHTML;
-        dots.innerHTML = `<circle id="dot2" cx="12.5" cy="2.5" r="2.5" fill="#050505" class="cir" />
+        dots.innerHTML = `<circle id="dot2" cx="12.5" cy="2.5" r="2.5" fill="#050505"/>
         <path class="lines" d="M13.5 5.5L18.5 0.5M5.5 13.5L0.5 18.5M5.5 5.5C5.5 5.5 2.45262 2.45262 0.5 0.5M13.5 13.5L18.5 18.5" stroke="#050505" stroke-linecap="round" stroke-linejoin="round"/>`;
     } else {
         toggle(menuOutput,'nav-down',menuLogo,'status');
@@ -42,3 +46,10 @@ viewBtn.forEach(view =>{
     toggle(btn,'text-white',btn,'text-primary');
 });
 });
+
+//Trigger the particle.js to the website
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('Particles.js loaded');
+  });
+
+}
